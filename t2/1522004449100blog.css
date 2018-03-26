@@ -1,0 +1,175 @@
+.blog-wrap.compass {
+    max-width: 998px;
+    /* width: 998px; */
+}
+
+.blog-wrap.column {
+    max-width: 900px;
+    /* width: 900px; */
+}
+
+.blog-wrap.skyline {
+    max-width: 1026px;
+    /* width: 1026px; */
+}
+
+.blog-wrap.simple {
+    padding-top: 20px;
+    max-width: 1096px;
+    /* width: 1096px; */
+}
+
+.blog-wrap.pieces {
+    max-width: 1040px;
+    /* width: 1040px; */
+}
+
+.blog-wrap.serendipity {
+    max-width: 1080px;
+    /* width: 1040px; */
+}
+
+
+/*blog-left*/
+
+.blog-left.compass.part {
+    max-width: 690px;
+    width: 69%;
+}
+
+.blog-left.column.part {
+    max-width: 628px;
+    width: 69%;
+}
+
+.dyna-sitebuild-content .blog-left {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.blog-right-sidebar.part {
+    display: none;
+}
+
+.blog-left.clean {
+    float: inherit;
+    margin: 0 auto;
+}
+
+.blog-left.simple.part {
+    max-width: 688px;
+    width: 63%;
+}
+
+.blog-left.skyline.part {
+    max-width: 688px;
+    width: 63%;
+}
+
+.blog-left.clean.part {
+    max-width: 1000px;
+    width: 70%;
+    float: left;
+}
+
+.blog-left.coastal.part {
+    max-width: 688px;
+    width: 63%;
+}
+
+.blog-left.pieces.part {
+    max-width: 760px;
+    width: 73%;
+}
+
+.blog-left.serendipity.part {
+    max-width: 680x;
+    width: 63%;
+}
+
+.blog-post-wrap {
+    margin-bottom: 40px;
+    float: left;
+    width: 100%;
+}
+
+.blog-post-comment-wrap {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.blog-post-content-wrap {
+    height: initial;
+    position: relative;
+}
+
+.blog-post-comment-item.column.author {
+    margin: 0 8px;
+}
+
+.blog-post-comment-item.column.date {
+    margin: 0 9px;
+}
+
+.blog-post-comment-item.column.comments {
+    margin: 0 7px;
+}
+
+.blog-post-more-wrap {
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 40px;
+    letter-spacing: 1px;
+    width: 100%;
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    padding: 0 1.5%;
+}
+
+a .blog-post-more {
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    font-size: 13px;
+}
+
+
+/*sidebar*/
+
+.blog-right-sidebar {
+    float: right;
+    max-width: 233px;
+}
+
+.blog-right-sidebar.skyline {
+    width: 23%;
+}
+
+.blog-right-sidebar.compass {
+    width: 23%;
+}
+
+.blog-right-sidebar.simple {
+    width: 21%;
+}
+
+.blog-right-sidebar.pieces {
+    width: 22%;
+}
+
+.blog-right-sidebar.clean {
+    width: 22%;
+}
+
+.blog-right-sidebar.serendipity {
+    width: 21%;
+}
+
+
+/*blog-right*/
+
+.blog-right-sidebar.column {
+    max-width: 188px;
+    text-align: center;
+    width: 20%;
+}
