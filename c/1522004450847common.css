@@ -579,6 +579,8 @@ div#dyna-sitebuild-site-navi li.drop ul li a {
 .tweet {
     margin: 0 0 2.5em 0;
     list-style-type: none;
+    max-height: 450px;
+    overflow-y: scroll;
 }
 
 .tweet-avatar-wrapper {
