@@ -126,3 +126,21 @@
 	padding-bottom:21px;
 	padding-top:21px;
 }
+
+.credits-table{
+    width: 100%;
+}
+.credits-table td{
+    text-align: left;
+    
+}
+.credits-table th{
+    background-color: #f883b2;
+    color: whitesmoke;
+}
+.right-table-end{
+   border-top-right-radius: 12px;
+}
+.left-table-end{
+   border-top-left-radius: 12px; 
+}
