@@ -210,3 +210,8 @@ body:after {
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
 }
+
+._warningspan {
+    padding-left: 5px;
+    color: red;
+}
