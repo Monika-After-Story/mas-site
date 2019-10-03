@@ -11,6 +11,26 @@ var DynaGallery = (function($, undefined) {
         'show-thumbnail-row': 'thumbnail-height-row,thumbnail-top-row'
     };
 
+    var screenshotMap = {
+        "BriarYoung": "Briar Young",
+        "ManuEcheveste": "ManuEcheveste",
+        "mas-hangman": "MAS Team",
+        "mas-piano": "MAS Team",
+        "moonstne": "moonstne",
+        "multi": "multi",
+        "NoexHaruhi": "NoexHaruhi",
+        "NoexHaruhi-2": "NoexHaruhi",
+        "Rai99": "Rai99",
+        "Rai99-2": "Rai99",
+        "Trilasent": "Trilasent"
+    };
+
+    var divGItem = '<div class="dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image"></div>';
+    var divGItemDR = '"0.5666666666666667"';
+    var divGItemDMR = '"0.5555555555555556"';
+    var imgPath = "/img/";
+    var imgExt = "png";
+
     var aspectRatios = [{
         name: "1:1 Square",
         ratio: 100
@@ -92,6 +112,25 @@ var DynaGallery = (function($, undefined) {
         $Padding: 20,
         $Lightbox: false
     }];
+
+    var shuffle = function (array) {
+      var currentIndex = array.length, temporaryValue, randomIndex;
+
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    };
 
     var reInitClass = function(block, type) {
         for (var i = 0; i < styleClasses.length; i++) {
@@ -177,50 +216,67 @@ var DynaGallery = (function($, undefined) {
         var imgs = tmp.find('.dyna-sitebuild-gallery-item');
         newBlockItems.attr('u', 'slides');
 
-        $
-            .each(
-                imgs,
-                function() {
-                    if ($(this)
-                        .hasClass(
-                            'dyna-sitebuild-gallery-image')) {
-                        var img = $(this).find('img');
-                        if (isJqueryObjectExists(img)) {
-                            var src = img.attr('src');
-                            if (isJqueryObjectExists(src)) {
-                                var item = $('<div class="dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image"></div>');
-                                var image = $('<img/>');
-                                if (src.indexOf('?img_id') != -1) {
-                                    var newSrc = src + '&w=' + w;
-                                    image.attr('src', newSrc);
-                                } else {
-                                    image.attr('src', src);
-                                }
-                                var r = img.data('ratio');
-                                var h = width * r;
-                                if(r != ratio){
-                                	image.css('margin-top', (height-h)/(2*width)*100+'%');
-                                }
-                                item.append(image);
-                                image
-                                    .attr('u',
-                                        'image');
-                                if (slideOptions['$ThumbnailNavigatorOptions']['$ChanceToShow'] != '0') {
-                                    var thumbnail = $('<img/>');
-                                    thumbnail.attr(
-                                        'src', src);
-                                    thumbnail.attr('u',
-                                        'thumb');
-                                    item
-                                        .append(thumbnail);
-                                }
+        var ssKeys = shuffle(Object.keys(screenshotMap));
 
-                                newBlockItems
-                                    .append(item);
-                            }
+        for (const ssKey of ssKeys)
+        {
+            var item = $(divGItem);
+            var image = $('<img>');
+            image.attr("src", imgPath + ssKey + imgExt);
+            item.append(image)
+            image.attr('u', 'image');
+            newBlockItems.append(item);
+        }
+
+        /*
+        $.each(imgs, function() {
+            if ($(this).hasClass('dyna-sitebuild-gallery-image'))
+            {
+                var img = $(this).find('img');
+                if (isJqueryObjectExists(img))
+                {
+                    var src = img.attr('src');
+                    if (isJqueryObjectExists(src)) 
+                    {
+                        var item = $(divGItem);
+                        var image = $('<img/>');
+                        if (src.indexOf('?img_id') != -1) 
+                        {
+                            var newSrc = src + '&w=' + w;
+                            image.attr('src', newSrc);
                         }
+                        else
+                        {
+                            image.attr('src', src);
+                        }
+                        var r = img.data('ratio');
+                        var h = width * r;
+                        if(r != ratio){
+                            image.css('margin-top', (height-h)/(2*width)*100+'%');
+                        }
+                        item.append(image);
+                        image.attr('u','image');
+
+                        if (slideOptions['$ThumbnailNavigatorOptions']['$ChanceToShow'] != '0')
+                        {
+                            var thumbnail = $('<img/>');
+                            thumbnail.attr('src', src);
+                            thumbnail.attr('u','thumb');
+                            item.append(thumbnail);
+                        }
+                        newBlockItems.append(item);
                     }
-                });
+                }
+            }
+        });
+        */
+
+        /*
+         *
+    data-html="&lt;div class=&quot;dyna-sitebuild-gallery-items&quot;&gt;&lt;div class=&quot;dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image&quot;&gt;&lt;img src=&quot;/dyna-builder/user_images/MAS-1.png?img_id=23&amp;amp;sbid=39580&quot; data-ratio=&quot;0.5666666666666667&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image&quot;&gt;&lt;img src=&quot;/dyna-builder/user_images/MAS-4.png&quot;&quotdata-ratio=&quot;0.5666666666666667&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image&quot;&gt;&lt;img src=&quot;/dyna-builder/user_images/MAS-5.png&quot;&quotdata-ratio=&quot;0.5666666666666667&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image&quot;&gt;&lt;img src=&quot;/dyna-builder/user_images/hangman2.jpg&quot;&quot;data-ratio=&quot;0.5555555555555556&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image&quot;&gt;&lt;img src=&quot;/dyna-builder/user_images/MAS-3.png&quot;&quot;data-ratio=&quot;0.5666666666666667&quot;&gt;&lt;/div&gt;&lt;/div&gt;" 
+
+        */
+
         tmp = $('<div/>');
         slidesWrap.append(newBlockItems);
         slideContainer.append(slidesWrap);
