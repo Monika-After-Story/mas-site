@@ -222,7 +222,7 @@ var DynaGallery = (function($, undefined) {
         {
             var item = $(divGItem);
             var image = $('<img>');
-            image.attr("src", imgPath + ssKey + imgExt);
+            image.attr("src", imgPath + ssKey + "." + imgExt);
             item.append(image)
             image.attr('u', 'image');
             newBlockItems.append(item);
