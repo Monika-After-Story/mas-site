@@ -26,6 +26,7 @@ var DynaGallery = (function($, undefined) {
     };
 
     var divGItem = '<div class="dyna-sitebuild-gallery-item dyna-sitebuild-gallery-image"></div>';
+    var divAuthOverlay = '<div class="_authorOverlay"></div>';
     var divGItemDR = '"0.5666666666666667"';
     var divGItemDMR = '"0.5555555555555556"';
     var imgPath = "/img/";
@@ -220,11 +221,22 @@ var DynaGallery = (function($, undefined) {
 
         for (const ssKey of ssKeys)
         {
+            // construct the div to contain each image slider
             var item = $(divGItem);
+
+            // construct the image
             var image = $('<img>');
             image.attr("src", imgPath + ssKey + "." + imgExt);
-            item.append(image)
             image.attr('u', 'image');
+
+            // add image to container div
+            item.append(image)
+
+            // construct the overlay div
+            var overlayDiv = $(divAuthOverlay);
+            overlayDiv.text(screenshotMap[ssKey]);
+            item.append(overlayDiv)
+
             newBlockItems.append(item);
         }
 

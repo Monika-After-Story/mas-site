@@ -1,0 +1,8 @@
+
+._authorOverlay {
+    background-color: rgba(238, 238, 238, 0.4);
+    padding: 4px;
+    position: absolute;
+    bottom: 8px;
+    right: 2px;
+}
