@@ -234,7 +234,7 @@ var DynaGallery = (function($, undefined) {
 
             // construct the overlay div
             var overlayDiv = $(divAuthOverlay);
-            overlayDiv.text("Screenshot provided by: " + screenshotMap[ssKey]);
+            overlayDiv.text("Screenshot taken by: " + screenshotMap[ssKey]);
             item.append(overlayDiv)
 
             newBlockItems.append(item);
