@@ -218,6 +218,7 @@ var DynaGallery = (function($, undefined) {
 
         var ssKeys = shuffle(Object.keys(screenshotMap));
 
+        /*
         for (const ssKey of ssKeys)
         {
             var item = $(divGItem);
@@ -227,6 +228,16 @@ var DynaGallery = (function($, undefined) {
             image.attr('u', 'image');
             newBlockItems.append(item);
         }
+        */
+
+        var ssKey = "mas-hangman";
+
+        var item = $(divGItem);
+        var image = $('<img>');
+        image.attr("src", imgPath + ssKey + "." + imgExt);
+        item.append(image)
+        image.attr('u', 'image');
+        newBlockItems.append(item);
 
         /*
         $.each(imgs, function() {
