@@ -1,0 +1,146 @@
+#dyna-sitebuild-site-wrap
+{
+}
+#dyna-sitebuild-site-top-background
+{
+	background-image: url("/dyna-builder/user_images/monikaroomnight.png?img_id=16&sbid=39580");
+	background-position:top center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+}
+#dyna-sitebuild-site-top-rest-background #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-head
+{
+	display:block;
+}
+#dyna-sitebuild-site-top-rest-background #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-head, #sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest .dyna-sitebuild-site-top-rest-head
+{
+	color:#ffffff;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-head, #sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest .dyna-sitebuild-site-top-rest-head
+{
+	font-family:Questrial;
+}
+#dyna-sitebuild-site-top-rest-background #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-sub
+{
+	display:block;
+}
+#dyna-sitebuild-site-top-rest-background #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-sub, #sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest .dyna-sitebuild-site-top-rest-sub
+{
+	color:#ffffff;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-head, #sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest .dyna-sitebuild-site-top-rest-head
+{
+	font-family:Questrial;
+	font-size:84px;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-tall #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-head, #sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest .dyna-sitebuild-site-top-rest-head
+{
+	font-family:Questrial;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-short #dyna-sitebuild-site-top-rest #dyna-sitebuild-site-top-rest-head, #sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest .dyna-sitebuild-site-top-rest-head
+{
+	font-family:Questrial;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div, #dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div
+{
+	display:block;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div, #dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div,#sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest-button div
+{
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div.solid,#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div.solid
+{
+	display:block;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div.solid,#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div.solid,#sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest-button div.solid,#sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest-button div.outline:hover
+{
+	background-color: rgb(221, 140, 115);
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div.solid:hover,#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div.solid:hover,#sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest-button div.solid:hover
+{
+	opacity: 0.5;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div.outline,#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div.outline
+{
+	display:block;
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div.outline,#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div.outline,#sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest-button div.outline
+{
+	border-color:rgb(221, 140, 115);
+	color:rgb(221, 140, 115);
+}
+#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-landing #dyna-sitebuild-site-top-rest-button div.outline:hover,#dyna-sitebuild-site-top-rest-background.dyna-sitebuild-site-top-rest-cover #dyna-sitebuild-site-top-rest-button div.outline:hover,#sitebuild-site-top-rest-background-slide-container .dyna-sitebuild-site-top-rest-button div.outline:hover
+{
+	background-color: rgb(221, 140, 115);
+}
+#dyna-sitebuild-site-top-rest
+{
+}
+#dyna-sitebuild-site-top-border
+{
+	padding-top:0px;
+}
+#dyna-sitebuild-site-head.dyna-sitebuild-site-img-head img
+{
+	max-height:200px;
+}
+#dyna-sitebuild-site-top-nav-background
+{
+	background-color: rgba(253, 226, 255, 0);
+}
+#dyna-sitebuild-site-navi ul li a, #dyna-sitebuild-site-navi ul li a:visited
+{
+	color:#ffffff;
+}
+.dyna-sitebuild-content a, .dyna-sitebuild-content a:visited
+{
+	color:#f883b2;
+}
+.dyna-sitebuild-content a:hover
+{
+	color:#e65690;
+}
+.dyna-sitebuild-content h3
+{
+	color:#7d7d7d;
+	font-weight:normal;
+	font-style:normal;
+	text-transform:none;
+	letter-spacing:0px;
+}
+.dyna-sitebuild-content .dyna-sitebuild-block-button .dyna-sitebuild-block-button-content.solid
+{
+}
+.dyna-sitebuild-content .dyna-sitebuild-block-button .dyna-sitebuild-block-button-content.solid:hover
+{
+}
+.dyna-sitebuild-content .dyna-sitebuild-block-button .dyna-sitebuild-block-button-content.outline,.dyna-sitebuild-content .dyna-sitebuild-block-button .dyna-sitebuild-block-button-content.outline
+{
+}
+.dyna-sitebuild-content .dyna-sitebuild-block-button .dyna-sitebuild-block-button-content.outline:hover
+{
+}
+#dyna-sitebuild-footer-content
+{
+	padding-bottom:21px;
+	padding-top:21px;
+}
+
+.credits-table{
+    width: 100%;
+}
+.credits-table td{
+    text-align: left;
+    
+}
+.credits-table th{
+    background-color: #f883b2;
+    color: whitesmoke;
+}
+.right-table-end{
+   border-top-right-radius: 12px;
+}
+.left-table-end{
+   border-top-left-radius: 12px; 
+}
