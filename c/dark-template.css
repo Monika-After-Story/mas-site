@@ -339,7 +339,8 @@ p {
 }
 
 body {
-    color: #1D1D1D;
+    color :#eeeeee;
+    background-color: #1d1d1d;
     /*background-color: #FAFAFA;*/
     background-size: none;
     /*background-image: url("/t6/body-bg.jpg");*/
@@ -361,7 +362,7 @@ h6 {
     padding: 0;
     margin-bottom: 15px;
     font-weight: normal;
-    color: #1F1F1F;
+    color: #eeeeee;
     line-height: 1em;
 }
 
