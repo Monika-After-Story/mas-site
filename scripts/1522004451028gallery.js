@@ -240,7 +240,7 @@ var DynaGallery = (function($, undefined) {
             webp.attr("type", "image/webp");
 
             var jpg = $("<img>");
-            jpg.attr("src", imgPath + ssKey + ".jpgddd");
+            jpg.attr("src", imgPath + ssKey + ".jpg");
             jpg.attr("u", "image");
 
             image.append(avif, webp, jpg);
@@ -331,6 +331,16 @@ var DynaGallery = (function($, undefined) {
         tmp.append(slideContainer);
         block.find('.dyna-sitebuild-block-content').html(
             tmp.html());
+
+        slideContainer.find('picture > img').each(function () {
+            console.log('Before Jssor:', {
+                src: this.src,
+                currentSrc: this.currentSrc
+            });
+
+            this.src = this.currentSrc;
+        });
+
         var jssor_slider = new $JssorSlider$(slideContainer.attr('id'),
             slideOptions);
         $(window).bind("resize", function(){
