@@ -733,25 +733,26 @@ var DynaGallery = (function($, undefined) {
     
     return {
         reInit: async function() {
-            $.each($('.dyna-sitebuild-block-gallery'), function() {
-            	var datas = $(this).data();
+
+            for (const element of $('.dyna-sitebuild-block-gallery')) {
+            	var datas = $(element).data();
             	for(var name in datas){
             		var value = datas[name];
-            		$(this).removeAttr('data-'+name);
-            		$(this).data(name, value);
+            		$(element).removeAttr('data-'+name);
+            		$(element).data(name, value);
             	}
-                await reInitialGallery($(this));
-            });
+                await reInitialGallery($(element));
+            }
             
-            $.each($('.dyna-sitebuild-block-instagram'), function() {
-            	var datas = $(this).data();
+            for (const element of $('.dyna-sitebuild-block-instagram')) {
+            	var datas = $(element).data();
             	for(var name in datas){
             		var value = datas[name];
-            		$(this).removeAttr('data-'+name);
-            		$(this).data(name, value);
+            		$(element).removeAttr('data-'+name);
+            		$(element).data(name, value);
             	}
-                await reInitialGallery($(this));
-            });
+                await reInitialGallery($(element));
+            }
             
             var $headerCarousel = $("#dyna-sitebuild-site-top-rest-background"),
 		    	bgOptions = $headerCarousel.attr("data-bg-options"),
