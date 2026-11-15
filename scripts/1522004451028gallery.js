@@ -239,9 +239,9 @@ var DynaGallery = (function($, undefined) {
             webp.attr("srcset", imgPath + ssKey + ".webp");
             webp.attr("type", "image/webp");
 
-            var jpg = $("<source>");
-            jpg.attr("srcset", imgPath + ssKey + ".jpg");
-            jpg.attr("type", "image/jpeg");
+            var jpg = $("<img>");
+            jpg.attr("src", imgPath + ssKey + ".jpgddd");
+            jpg.attr("u", "image");
 
             image.append(avif, webp, jpg);
 
