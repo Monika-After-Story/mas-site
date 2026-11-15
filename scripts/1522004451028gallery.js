@@ -225,9 +225,25 @@ var DynaGallery = (function($, undefined) {
             var item = $(divGItem);
 
             // construct the image
+            /*
             var image = $('<img>');
             image.attr("src", imgPath + ssKey + "." + imgExt);
             image.attr('u', 'image');
+            */
+            var image = $("<picture>");
+            var avif = $("<source>");
+            avif.attr("srcset", imgPath + ssKey + ".avif");
+            avif.attr("type", "image/avif");
+
+            var webp = $("<source>");
+            webp.attr("srcset", imgPath + ssKey + ".webp");
+            webp.attr("type", "image/web");
+
+            var jpg = $("<img>");
+            jpg.attr("src", imgPath + ssKey + ".jpg");
+            jpg.attr("u", "image");
+
+            image.append(avif, webp, jpg);
 
             // add image to container div
             item.append(image)
