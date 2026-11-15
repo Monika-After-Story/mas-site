@@ -148,7 +148,7 @@ var DynaGallery = (function($, undefined) {
         }
     };
 
-    var reInitialGallery = function(block) {
+    var reInitialGallery = async function(block) {
         var type = block.data('type');
         if (!isJqueryObjectExists(type)) {
             return;
@@ -156,7 +156,7 @@ var DynaGallery = (function($, undefined) {
         type = parseInt(type);
         switch (type) {
             case 0:
-                reInitSlide(block);
+                await reInitSlide(block);
                 reInitClass(block, 0);
                 break;
             case 1:
@@ -176,7 +176,47 @@ var DynaGallery = (function($, undefined) {
         }
     };
 
-    var reInitSlide = function(block) {
+    var supportsImageFormat = async function(uri) {
+        return new Promise(function(resolve) {
+            var img = new Image();
+
+            img.onload = function() {
+                resolve(img.naturalWidth > 0);
+            };
+
+            img.onerror = function() {
+                resolve(false);
+            };
+
+            img.src = url;
+        });
+    };
+
+    var getBestImageFormat = async function() {
+        var avif = "data:image/avif;base64," +
+            "AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAA" +
+            "oaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAA" +
+            "AAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAA" +
+            "QAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRp" +
+            "c3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABN" +
+            "jb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0Eg" +
+            "AKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
+
+        var webp = "data:image/webp;base64," +
+            "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA"; 
+
+        if (await supportsImageFormat(avif)) {
+            return "avif";
+        }
+
+        if (await supportsImageFormat(webp)) {
+            return "webp";
+        }
+
+        return "jpg";
+    };
+
+    var reInitSlide = async function(block) {
         var html = block.data('html');
         var options = block.data('options');
         var ratio = block.data('ratio');
@@ -219,17 +259,19 @@ var DynaGallery = (function($, undefined) {
 
         var ssKeys = shuffle(Object.keys(screenshotMap));
 
+        imgExt = await getBestImageFormat();
+
         for (const ssKey of ssKeys)
         {
             // construct the div to contain each image slider
             var item = $(divGItem);
 
             // construct the image
-            /*
             var image = $('<img>');
             image.attr("src", imgPath + ssKey + "." + imgExt);
             image.attr('u', 'image');
-            */
+
+            /*
             var image = $("<picture>");
             var avif = $("<source>");
             avif.attr("srcset", imgPath + ssKey + ".avif");
@@ -244,6 +286,8 @@ var DynaGallery = (function($, undefined) {
             jpg.attr("u", "image");
 
             image.append(avif, webp, jpg);
+            */
+
 
             // add image to container div
             item.append(image)
@@ -331,16 +375,6 @@ var DynaGallery = (function($, undefined) {
         tmp.append(slideContainer);
         block.find('.dyna-sitebuild-block-content').html(
             tmp.html());
-
-        slideContainer.find('picture > img').each(function () {
-            console.log('Before Jssor:', {
-                src: this.src,
-                currentSrc: this.currentSrc
-            });
-
-            this.src = this.currentSrc;
-        });
-
         var jssor_slider = new $JssorSlider$(slideContainer.attr('id'),
             slideOptions);
         $(window).bind("resize", function(){
@@ -698,7 +732,7 @@ var DynaGallery = (function($, undefined) {
     }
     
     return {
-        reInit: function() {
+        reInit: async function() {
             $.each($('.dyna-sitebuild-block-gallery'), function() {
             	var datas = $(this).data();
             	for(var name in datas){
@@ -706,7 +740,7 @@ var DynaGallery = (function($, undefined) {
             		$(this).removeAttr('data-'+name);
             		$(this).data(name, value);
             	}
-                reInitialGallery($(this));
+                await reInitialGallery($(this));
             });
             
             $.each($('.dyna-sitebuild-block-instagram'), function() {
@@ -716,7 +750,7 @@ var DynaGallery = (function($, undefined) {
             		$(this).removeAttr('data-'+name);
             		$(this).data(name, value);
             	}
-                reInitialGallery($(this));
+                await reInitialGallery($(this));
             });
             
             var $headerCarousel = $("#dyna-sitebuild-site-top-rest-background"),

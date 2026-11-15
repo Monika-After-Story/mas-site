@@ -10,7 +10,7 @@
 
 $(document)
 		.ready(
-				function() {
+				async function() {
 					$(document).click(function(e) {
 						messageButtonClick(e.target);
 						thumbnailClick(e.target);
@@ -26,7 +26,7 @@ $(document)
 					initEditBlocks();
 					initVideo();
 					initMenu();
-					DynaGallery.reInit();
+					await DynaGallery.reInit();
 					DynaImage.reInit();
 					initMaps();
 				});
