@@ -10,7 +10,8 @@
 
 $(document)
 		.ready(
-				async function() {
+				function() {
+        (async function() {
 					$(document).click(function(e) {
 						messageButtonClick(e.target);
 						thumbnailClick(e.target);
@@ -29,7 +30,9 @@ $(document)
 					await DynaGallery.reInit();
 					DynaImage.reInit();
 					initMaps();
-				});
+				})().catch(function(err) {
+                    console.error(err);
+        }));
 
 function initVideo() {
 	// $.each($('.dyna-sitebuild-block-video .video-wrap'), function() {
