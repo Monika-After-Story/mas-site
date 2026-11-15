@@ -176,7 +176,7 @@ var DynaGallery = (function($, undefined) {
         }
     };
 
-    var supportsImageFormat = async function(uri) {
+    var supportsImageFormat = function(uri) {
         return new Promise(function(resolve) {
             var img = new Image();
 
@@ -188,19 +188,20 @@ var DynaGallery = (function($, undefined) {
                 resolve(false);
             };
 
-            img.src = url;
+            img.src = uri;
         });
     };
 
     var getBestImageFormat = async function() {
         var avif = "data:image/avif;base64," +
-            "AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAA" +
-            "oaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAA" +
-            "AAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAA" +
-            "QAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRp" +
-            "c3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABN" +
-            "jb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0Eg" +
-            "AKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
+            "AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQA" +
+            "AAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aW" +
+            "YAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABG" +
+            "gAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29s" +
+            "b3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAA" +
+            "AEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAA" +
+            "IAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgAN" +
+            "ogQEAwgMg8f8D///8WfhwB8+ErK42A=";
 
         var webp = "data:image/webp;base64," +
             "UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA"; 
