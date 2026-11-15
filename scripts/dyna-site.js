@@ -32,7 +32,8 @@ $(document)
 					initMaps();
 				})().catch(function(err) {
                     console.error(err);
-        }));
+        });
+    });
 
 function initVideo() {
 	// $.each($('.dyna-sitebuild-block-video .video-wrap'), function() {
